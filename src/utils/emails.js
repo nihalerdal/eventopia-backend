@@ -10,6 +10,9 @@ const transporter = nodemailer.createTransport({
     user: "apikey",
     pass: process.env.SENDER_EMAIL_PASSWORD,
   },
+  connectionTimeout: 30000,
+  greetingTimeout: 30000,
+  socketTimeout: 30000,
   tls: {
     rejectUnauthorized: false,
   },
